@@ -21,7 +21,72 @@ h1 {
 .logo {
     max-height: 40px;
 }
- 
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000000;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .buttons {
+        margin-top: 10px;
+    }
+}
+
+.nav-link.home {
+    text-decoration: underline; 
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-button,
+.signup-button {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.login-button {
+    color: #000;
+    background-color: transparent;
+}
+
+.signup-button {
+    background-color: #ACACAC;
+    color: #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 /* End of header */
 /*Starter*/ 
 .starter {
@@ -66,27 +131,30 @@ h1 {
     }
 }
 /* Starter*/
+
 /*categorys*/
+.center-services{
+    text-align: center;
+}
 .browse-category-title {
-    margin-top: 50px;
     font-weight: 600;
     margin-left: 20px;
-    margin-bottom: 20px; /* Adjust as needed */
+    margin-bottom: 20px; 
 }
 
 .categories {
-    margin-bottom: 60px;
-    flex-wrap: wrap;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; 
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .category-box {
     position: relative;
-    width: 500px; /* Set a fixed width */
-    height: 300px; /* Set a fixed height */
+    width: 350px;
     text-align: center;
-    margin: 10px;
+    margin: 20px 50px;
+    flex: 0 0 auto; 
 }
 
 .box-content {
@@ -94,12 +162,11 @@ h1 {
     padding: 70px;
     margin-right: -60px;
     border-radius: 20px;
-    height: 100%; /* Occupy the entire height of the box */
 }
 
 
 .category-box.birthday {
-    background-image: url('img/starter.jpeg'); 
+    background-image: url('img/R.jfif'); 
     background-size: cover;
     border-radius: 20px;
     padding-right: 60px;
@@ -120,55 +187,33 @@ h1 {
 }
 
 .category-box.graduation {
-    background-image: url('img/graduation.jfif'); 
+    background-image: url('img/Fund.jfif'); 
+    background-size: cover;
+    border-radius: 20px;
+    padding-right: 60px;
+}
+
+.category-box.four-ser {
+    background-image: url('img/Fund.jfif'); 
+    background-size: cover;
+    border-radius: 20px;
+    padding-right: 60px;
+}
+
+.category-box.five-ser {
+    background-image: url('img/Initation.jpg'); 
     background-size: cover;
     border-radius: 20px;
     padding-right: 60px;
 }
 
 .category-box p {
-    margin-top: auto;
     position: absolute;
+    bottom: -45px; 
     left: 0;
     right: 0;
     color: #000000;
     font-weight: 600;
-    font-size: 30px;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 768px) {
-    .category-box p {
-        margin-top: auto;
-        position: absolute;
-        left: 0;
-        right: 0;
-        color: #000000;
-        font-weight: 600;
-        font-size: 25px;
-    }
-    .category-box.music {
-        margin-top: 50px;
-        background-image: url('img/party.jpg'); 
-        background-size: cover;
-        border-radius: 20px;
-        padding-right: 60px;
-    }
-    
-    .category-box.wedding {
-        margin-top: 40px;
-        background-image: url('img/wedding.jpg'); 
-        background-size: cover;
-        border-radius: 20px;
-        padding-right: 60px;
-    }
-    .categories {
-        justify-content: center;
-    }
-
-    .category-box {
-        width: calc(50% - 20px);
-    }
 }
 
 /* Adjustments for even smaller screens */
@@ -180,7 +225,6 @@ h1 {
 
 /* packages */
 .package-title {
-    margin-top: 30px;
     font-weight: 600;
     margin-left: 20px;
     margin-top: 45px; /* Adjust as needed */
@@ -196,7 +240,6 @@ h1 {
 }
 
 .package {
-    margin-bottom: 40px;
     text-align: center;
     padding: 15px;
     border: 1px solid #dee2e6;
@@ -205,6 +248,37 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
 }
+
+
+.package-custom {    
+    width: calc(44.3333% - 20px);
+    text-align: center;
+    margin: 30px auto;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px; /* Adjust the margin as needed */
+}
+
+@media (max-width: 576px) {
+    .package-custom {
+        width: calc(100% - 20px);
+    }
+}
+
+.package-custom p{ 
+    margin-top: 20px;  
+    font-size: 30px;
+}
+
+.package-custom h3{ 
+    margin-top: 20px;  
+    font-size: 30px;
+}
+
 
 .package p{
     margin-top: -0px;
@@ -227,7 +301,7 @@ h1 {
     justify-content: center;
     font-weight: bold;
     margin: 10px auto;
-    margin-top: -9px;
+    margin-top: -15px;
 }
 
 
@@ -289,6 +363,7 @@ h1 {
 
 
 /* Packages */
+
 
 
 /* ... Footer ... */
