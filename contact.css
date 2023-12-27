@@ -30,13 +30,13 @@ h1 {
 
 .nav-links {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .nav-link {
     text-decoration: none;
     color: #000000;
-    margin-left: 20px;
+    margin: 0 15px;
     font-weight: bold;
     font-size: 18px;
 }
@@ -142,101 +142,106 @@ h1 {
 }
 /* Starter*/
 
-/* Sections*/
 .section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+  }
 
-.split-container {
+  .split-container {
     display: flex;
     width: 80%;
     margin-top: 20px;
-}
+  }
 
-.form-container,
-.contact-details {
+  .form-container,
+  .contact-details {
     width: 50%;
     padding: 20px;
     box-sizing: border-box;
-}
+  }
 
-/* Form Styles */
-.form-container h2 {
+  /* Form Styles */
+  .form-container h2 {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
-}
+  }
 
-form {
+  form {
     display: flex;
     flex-direction: column;
-}
+  }
 
-label {
+  label {
     margin-bottom: 8px;
     font-weight: bold;
-    color: #000000; 
-}
+    color: #000000;
+  }
 
-label::before {
-    content: attr(data-placeholder); 
-    position: absolute;
-    left: 10px; 
-    top: 50%;
-    transform: translateY(-50%);
-    pointer-events: none; 
-}
-
-input,
-textarea {
+  input,
+  textarea,
+  select {
     border: 2px solid #8f8f8f;
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 15px;
-}
+    font-size: 14px;
+    background-color: #f7f7f7;
+  }
 
-button {
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #424242;
+    outline: none;
+  }
+
+  button {
     height: 50px;
-    background-color: #949494;
+    background-color: #ff94bb;
     color: #ffffff;
     border-radius: 10px;
     border: none;
     padding: 10px;
     cursor: pointer;
-}
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
 
-.contact-details h2 {
+  button:hover {
+    background-color: #bc6b89;
+  }
+
+  .contact-details h2 {
     font-size: 24px;
     margin-bottom: 15px;
-}
+  }
 
-.contact-details p {
+  .contact-details p {
     margin-bottom: 10px;
-}
+  }
 
-iframe {
+  iframe {
     width: 100%;
     height: 300px;
     border: none;
-}
+  }
 
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
     .split-container {
-        flex-direction: column;
+      flex-direction: column;
     }
 
     .form-container,
     .contact-details {
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
     }
-}
-
-/* End of form */ 
+  }
+  /* End of form */
 
 /* Grey Box */
 .grey-box {
