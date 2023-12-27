@@ -8,37 +8,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body><nav class="navbar navbar-dark navbar-expand-sm fixed-top" style="background-color: #ff94bb;">
-    <div class="container">
-        <a href="/" class="navbar-brand">
-            <i class=""> <img src="/img/logo.png" alt="Logo" style="max-height: 50px;"></i> &nbsp;
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="/index.html" class="nav-link active" style="color: #ffffff;">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/services.html" class="nav-link active" style="color: #ffffff;">
-                        Services
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/contact.html" class="nav-link active" style="color: #ffffff;">
-                        Contact
-                    </a>
-                </li>
-            </ul>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top" style="background-color: #ff94bb;">
+        <div class="container">
+            <a class="navbar-brand">
+                <i class=""> <img src="img/logo.png" alt="Logo" style="max-height: 50px;"></i> &nbsp;
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" style="color: #ffffff;">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link active" style="color: #ffffff;">
+                            Service
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active" style="color: #ffffff;">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>           
 
     <div class="section">
         <div class="starter">
@@ -51,23 +52,38 @@
 <div class="section">
     <div class="split-container">
         <div class="form-container">
-            <h2>Say Hello!</h2>
+            <h2>Event Request Form</h2>
             <form id="contactForm">
                 <label for="fullName">Full Name:</label>
                 <input type="text" id="fullName" name="fullName" required>
-
+        
                 <label for="contactNumber">Contact Number:</label>
                 <input type="tel" id="contactNumber" name="contactNumber" required>
-
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message" >Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Submit</button>
+        
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+        
+                <label for="package">Package:</label>
+                <select id="package" name="package" required>
+                    <option value=""></option>
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silver</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="custom">Custom</option>
+                </select>
+        
+                <label for="services">Services:</label>
+                <select id="services" name="services" required>
+                    <option value=""></option>
+                    <option value="bespokeCatering">Bespoke Catering</option>
+                    <option value="soundAndLighting">Sound and Lighting</option>
+                    <option value="themesAndProps">Themes and Props</option>
+                </select>
+        
+                <button type="submit">Submit Request</button>
             </form>
         </div>
+        
 
         <div class="contact-details">
             <h2>Contact Details</h2>
